@@ -5,7 +5,7 @@
 #' @export
 #' @importFrom shiny shinyApp
 #' @importFrom golem with_golem_options
-run_app <- function(
+paper_dig <- function(
   ...
 ) {
   with_golem_options(
