@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of paperdigger is to ...
+The goal of paperdigger is to automatically download academic paper from sci-hub
 
 ## Installation
 
@@ -43,8 +43,8 @@ To use the R function
 
 ``` r
 library(paperdigger)
-## basic example code
-sci_loc("ad.bib",original="Database)
+## original refers to the source of the bibliographic file, either from a database or from manual collection 
+sci_loc("ad.bib",original="Database")
 
 ```
 
