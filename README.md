@@ -36,5 +36,5 @@ To use the R function
 ``` r
 library(paperdigger)
 ## original refers to the source of the bibliographic file, either from a database or from manual collection 
-sci_loc("ad.bib",original="Database")
+sci_down("ad.bib",original="Database")
 ```
