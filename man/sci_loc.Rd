@@ -2,17 +2,17 @@
 % Please edit documentation in R/fct_sci_loc.R
 \name{sci_loc}
 \alias{sci_loc}
-\title{Download sci_hub paper}
+\title{Download paper from sci hub}
 \usage{
 sci_loc(path, input_url = NULL, original)
 }
 \arguments{
 \item{path}{The file path of the input data}
 
-\item{input_url}{sci url, if not offered by the user, sci-hub\.se will be used}
+\item{input_url}{sci url, if not offered by the user, sci-hub.se will be used}
 
-\item{original}{The source of your input data, from a database \(like web of science\) or from mendeley}
+\item{original}{The source of your input data,  "Database" means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.}
 }
 \description{
-Download sci_hub paper
+Download paper from sci hub
 }

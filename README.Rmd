@@ -22,26 +22,29 @@ The goal of paperdigger is to ...
 
 ## Installation
 
-You can install the released version of paperdigger from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("paperdigger")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("KiayangQ/paperdigger")
 ```
-## Example
+## usage
 
-This is a basic example which shows you how to download.
+To call the shinyapp
 
-```{r example}
+``` r
 library(paperdigger)
 ## basic example code
 paper_dig()
+
+```
+
+To use the R function 
+
+``` r
+library(paperdigger)
+## basic example code
+sci_loc("ad.bib",original="Database)
 
 ```
 

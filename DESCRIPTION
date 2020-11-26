@@ -17,6 +17,7 @@ Imports:
     glue,
     revtools,
     rvest,
+    progress,
     dplyr
 Encoding: UTF-8
 LazyData: true

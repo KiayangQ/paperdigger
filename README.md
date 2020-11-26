@@ -9,7 +9,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of paperdigger is to …
+The goal of paperdigger is to automatically download academic paper from
+sci-hub
 
 ## Installation
 

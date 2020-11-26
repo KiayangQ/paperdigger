@@ -6,6 +6,7 @@
 #' 
 #' @param original The source of your input data,  "Database" means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.  
 #' 
+#' @export
 #' 
 #' @importFrom shiny shinyApp
 #' @importFrom golem with_golem_options
@@ -15,7 +16,7 @@
 #' @importFrom purrr map
 #' @importFrom purrr discard
 
-sci_loc <- function(path,input_url=NULL,original){
+sci_down <- function(path,input_url=NULL,original){
 
 
   data_bib <- read_bib(path,original)
@@ -30,7 +31,7 @@ sci_loc <- function(path,input_url=NULL,original){
   }
   
   
-    pb <- progress::progress_bar$new(total = length(dois))
+    pb <- progress::progress_bar$new(total = length(dois),clear = FALSE)
     added <- round(runif(1,min=10000,max=99999))
     dir_name <- paste0("paper",added)
     dir.create(file.path(dir_name))
@@ -39,9 +40,7 @@ sci_loc <- function(path,input_url=NULL,original){
         pb$tick()
         data1 <- sci_down_orginal(url=url,dois=x,dir=y)
         
-       
-      value <-  match(x,dois)
-      setProgress(value = value)
+      
       Sys.sleep(2)
       return(data1)
     },
