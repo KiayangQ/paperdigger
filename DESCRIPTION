@@ -1,8 +1,8 @@
 Package: paperdigger
-Title: PKG_TITLE
+Title: This package helps you save time for search for academic papers
 Version: 0.0.0.9000
 Authors@R: person('Kaiyang', 'Qin', email = 'qkylove8@gmail.COM', role = c('cre', 'aut'))
-Description: PKG_DESC.
+Description: A very simple package, but help you save much time for finding and dowmloading papers.
 License: MIT + file LICENSE
 Imports: 
     config,
