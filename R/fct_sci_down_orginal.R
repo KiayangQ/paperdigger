@@ -56,6 +56,6 @@ sci_down_orginal <- function(url,dois,dir=NULL){
     if (stringr::str_detect(loc,"https")==FALSE){
     loc <-  stringr::str_replace(loc,"//","https://")
   }
-  download.file(loc,destfile=paste0(dir,"/",titles),mode = "wb")
+  download.file(loc,destfile=paste0(dir,"/",titles),mode = "wb",quiet = TRUE)
   return(loc)
 }
