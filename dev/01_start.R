@@ -15,8 +15,8 @@
 ## Add meta data about your application
 golem::fill_desc(
   pkg_name = "paperdigger", # The Name of the package containing the App 
-  pkg_title = "This package helps you save time for search for academic papers", # The Title of the package containing the App 
-  pkg_description = "A very simple package, but help you save much time for finding and dowmloading papers.", # The Description of the package containing the App 
+  pkg_title = "This package helps you save time for downloading academic papers", # The Title of the package containing the App 
+  pkg_description = "A very simple package, but help you save much time when downloading papers.", # The Description of the package containing the App 
   author_first_name = "Kaiyang", # Your First Name
   author_last_name = "Qin", # Your Last Name
   author_email = "qkylove8@gmail.COM", # Your Email
