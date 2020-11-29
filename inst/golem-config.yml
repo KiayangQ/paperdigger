@@ -1,5 +1,5 @@
 default:
-  golem_name: paper_digger
+  golem_name: paperdigger
   golem_version: 0.0.1
   app_prod: no
 production:

@@ -1,4 +1,4 @@
-Package: paper_digger
+Package: paperdigger
 Title: This package helps you save time for search for academic papers
 Version: 0.0.1
 Authors@R: person('Kaiyang', 'Qin', email = 'qkylove8@gmail.COM', role = c('cre', 'aut'))
