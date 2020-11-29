@@ -44,11 +44,11 @@ sci_down("ad.bib")
 You can download bibliographic data file (e.g. .bib or ris) from
 databases like web of science. ![center](man/figures/PIC1.jpg) You can
 add the paper you want to download to MarkList and export the BibTex
-file (In the image below, you can select other format, and you can found
+file (In the image below, you can select Other File Formats to access
 the BibTex format). ![center](man/figures/PIC2.jpg)
 
 Then call the shiny app and upload the data file,then click “load” to
-start downloading. You can see a progress bar at right cornor of the
+start downloading. You can see a progress bar at right corner of the
 downside.
 
 ![center](man/figures/PIC3.jpg)
