@@ -26,7 +26,12 @@ sci_loc <- function(path,input_url=NULL,original){
   if (is.null(input_url)){
     url <- "http://sci-hub.se"
   }else{
-    url <- input_url
+    if (stringr::str_detect(input_url,"//sci-hub")){
+      url <- input_url
+    }else{
+      stop("Please input a correct sci-hub url or use the default.")
+    }
+   
   }
   
   

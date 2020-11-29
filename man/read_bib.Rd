@@ -4,12 +4,12 @@
 \alias{read_bib}
 \title{read bibliographic data}
 \usage{
-read_bib(path, original)
+read_bib(path, original = "Database")
 }
 \arguments{
 \item{path}{file directory of your bibliographic data}
 
-\item{original}{Source of the data}
+\item{original}{Source of the data."Database" means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.}
 }
 \description{
 read bibliographic data

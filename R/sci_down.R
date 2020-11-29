@@ -4,7 +4,7 @@
 #' 
 #' @param input_url sci url, if not offered by the user, sci-hub.se will be used
 #' 
-#' @param original The source of your input data,  "Database" means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.  
+#' @param original The source of your input data,  "Database" (default) means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.  
 #' 
 #' @export
 #' 
@@ -16,7 +16,7 @@
 #' @importFrom purrr map
 #' @importFrom purrr discard
 
-sci_down <- function(path,input_url=NULL,original){
+sci_down <- function(path,input_url=NULL,original="Database"){
 
 
   data_bib <- read_bib(path,original)

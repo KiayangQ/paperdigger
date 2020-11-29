@@ -4,14 +4,14 @@
 \alias{sci_down}
 \title{Download paper from sci hub}
 \usage{
-sci_down(path, input_url = NULL, original)
+sci_down(path, input_url = NULL, original = "Database")
 }
 \arguments{
 \item{path}{The file path of the input data}
 
 \item{input_url}{sci url, if not offered by the user, sci-hub.se will be used}
 
-\item{original}{The source of your input data,  "Database" means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.}
+\item{original}{The source of your input data,  "Database" (default) means the data is from a database e.g. web of science. "Dois" means you collected dois by your self as a text file.}
 }
 \description{
 Download paper from sci hub
