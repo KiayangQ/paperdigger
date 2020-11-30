@@ -14,7 +14,7 @@ app_ui <- function(request) {
       sidebarLayout(
         sidebarPanel(
           fileInput("files",label = "Input meta data",accept = c(".ris",".bib")),
-          textInput('sci',label = "Input sci_hub data source"),
+          textInput('sci',label = "Input sci_hub url"),
           radioButtons("source",label="Select data source",choices = c("Dois","Database"),selected = "Database"),
           actionButton("load",label = "Load"),
           actionButton("reset",label = "Reset")
