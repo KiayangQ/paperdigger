@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 <!-- badges: end -->
 
 The goal of paperdigger is to automatically download academic papers
@@ -53,8 +54,9 @@ corner of the downside.
 
 ![center](man/figures/PIC3.jpg)
 
-You file will be stored in a file folder called “paperxxxxx”. You can
-find the file folder in the current working directory.
+**The downloaded paper** will be stored in a file folder called
+“paperxxxxx”. You can find the file folder in the current working
+directory.
 
 In addition, when the download is finished, you will see a summary table
 about how many papers you have successfully downloaded(success = 1).

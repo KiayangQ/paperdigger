@@ -12,10 +12,13 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # paperdigger
 
 <!-- badges: start -->
+
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 <!-- badges: end -->
 
 The goal of paperdigger is to automatically download academic papers from sci-hub.
@@ -28,6 +31,7 @@ You can install the package from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("KiayangQ/paperdigger")
 ```
+
 ## Usage
 
 To call the shinyapp:
@@ -36,39 +40,31 @@ To call the shinyapp:
 library(paperdigger)
 ## basic example code
 paper_dig()
-
 ```
 
-To use the R function: 
+To use the R function:
 
 ``` r
 library(paperdigger)
 ## original refers to the source of a bibliographic file, either from a database or from manual collection 
 sci_down("ad.bib")
-
 ```
+
 ## Example
 
-You can download a bibliographic data file (e.g. .bib or ris) from databases like web of science.
-![center](man/figures/PIC1.jpg)
-You can add the paper that you want to download to MarkList, and export them as a BibTex file (In the image below, you can select Other File Formats to access the BibTex format).
-![center](man/figures/PIC2.jpg)
+You can download a bibliographic data file (e.g. .bib or ris) from databases like web of science. ![center](man/figures/PIC1.jpg) You can add the paper that you want to download to MarkList, and export them as a BibTex file (In the image below, you can select Other File Formats to access the BibTex format). ![center](man/figures/PIC2.jpg)
 
 Then call the shiny app and upload the data file, so you can click "load" to start downloading. You can see a progress bar at right corner of the downside.
 
 ![center](man/figures/PIC3.jpg)
 
-
-You file will be stored in a file folder called "paperxxxxx". You can find the file folder in the current working directory.
+**The downloaded paper** will be stored in a file folder called "paperxxxxx". You can find the file folder in the current working directory.
 
 In addition, when the download is finished, you will see a summary table about how many papers you have successfully downloaded(success = 1).
 
 ![](man/figures/PIC4.jpg)
 
-
-
-You can also use sci_down function in R console.
-
+You can also use sci\_down function in R console.
 
 Simply use these code in R console:
 
@@ -76,26 +72,18 @@ Simply use these code in R console:
 library(paperdigger)
 
 sci_down(filename)
-
 ```
-Or if you use self collected dois, please save the file as .txt or .csv format and use the sci_down function like this:
+
+Or if you use self collected dois, please save the file as .txt or .csv format and use the sci\_down function like this:
 
 ``` r
 library(paperdigger)
 
 sci_down(filename,orignial="Dois")
-
 ```
 
 and this parameter is also optional in the shiny app).
 
-
 ## Note
 
-
 Now, this app works well for databases like web of science(.bib),science direct(.ris),ebsco(.ris),and even .bib files from Mendeley. Please output the recommended data format within brackets for each database. However, the database like google scholar is not supported since doi information is not available.
-
-
-
-
-
