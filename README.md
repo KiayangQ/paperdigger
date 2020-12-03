@@ -41,15 +41,15 @@ sci_down("ad.bib")
 
 ## Example
 
-You can download bibliographic data file (e.g. .bib or ris) from
+You can download a bibliographic data file (e.g. .bib or ris) from
 databases like web of science. ![center](man/figures/PIC1.jpg) You can
-add the paper you want to download to MarkList and export the BibTex
-file (In the image below, you can select Other File Formats to access
-the BibTex format). ![center](man/figures/PIC2.jpg)
+add the paper that you want to download to MarkList, and export them as
+a BibTex file (In the image below, you can select Other File Formats to
+access the BibTex format). ![center](man/figures/PIC2.jpg)
 
-Then call the shiny app and upload the data file,then click “load” to
-start downloading. You can see a progress bar at right corner of the
-downside.
+Then call the shiny app and upload the data file, so you can click
+“load” to start downloading. You can see a progress bar at right
+corner of the downside.
 
 ![center](man/figures/PIC3.jpg)
 
@@ -72,12 +72,12 @@ sci_down(filename)
 ```
 
 Or if you use self collected dois, please save the file as .txt or .csv
-format and make it like this:
+format and use the sci\_down function like this:
 
 ``` r
 library(paperdigger)
 
-sci_down(filename,"orignial=Dois")
+sci_down(filename,orignial="Dois")
 ```
 
 and this parameter is also optional in the shiny app).
