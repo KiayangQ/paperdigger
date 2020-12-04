@@ -82,7 +82,7 @@ library(paperdigger)
 sci_down(filename,orignial="Dois")
 ```
 
-and this parameter is also optional in the shiny app).
+and this parameter is also optional in the shiny app.
 
 ## Note
 
