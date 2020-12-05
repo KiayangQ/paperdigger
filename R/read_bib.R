@@ -17,7 +17,7 @@ read_bib <- function(path,original="Database"){
   options(warn = -1)
     ext_files <- c("txt","csv")
     if (file_ext(path)%in%ext_files){
-      stop("Please check 'original' parameter or your data file, since 'Database' only works for '.bib' or '.ris', but not '.txt'or,'.csv'" )
+      stop("Please check the 'original' parameter or your data file, since 'Database' only works for '.bib' or '.ris', but not '.txt'or,'.csv'" )
     }
   data <- revtools::read_bibliography(path)
         if("doi"%in%colnames(data)){
@@ -29,33 +29,15 @@ read_bib <- function(path,original="Database"){
         }
   }else{
   if (file_ext(path)%in%ext_files==FALSE){
-    stop("Please check 'original' parameter or your data file, since 'Dois' only works for '.txt'or,'.csv'" )
+    stop("Please check the 'original' parameter or your data file, since 'Dois' only works for '.txt'or,'.csv'" )
   }else{
-    data <- read.table(path,stringsAsFactors = FALSE)
+    data <- read.table(path,stringsAsFactors = FALSE) %>% dplyr::select(stringr::str_detect("doi"|"DOI"|"Doi"))
+    if (length(data)>1){
+      stop("Please check your file,and make sure that only one column is named Doi." )
+    }
     colnames(data)[1] <- "dois"
   }
   }
   return(data)
 }
 
-
-# # science direct ris
-# df <- revtools::read_bibliography("ScienceDirect_citations_1605438621362.ris") %>% select(.,title,doi) %>% 
-#   separate(.,doi,into = c("dois","others"),sep = "Early") %>% 
-#   mutate(.,dois = ifelse(is.na(dois)!=TRUE,paste0("https://doi.org/",dois),NA))
-# 
-# # ebsco host ris
-# df <- revtools::read_bibliography("ebsco.ris") %>% select(.,title,doi) %>% 
-#   separate(.,doi,into = c("dois","others"),sep = "Early") %>% 
-#   mutate(.,dois = ifelse(is.na(dois)!=TRUE,paste0("https://doi.org/",dois),NA))
-# 
-# 
-# # web of science bib
-# df <- revtools::read_bibliography(input$files$datapath) %>% select(.,title,doi) %>%   
-#   separate(.,doi,into = c("dois","others"),sep = "Early") %>% 
-#   mutate(.,dois = ifelse(is.na(dois)!=TRUE,paste0("https://doi.org/",dois),NA))
-# 
-# # mendeley bib & ris
-# df <- revtools::read_bibliography("men.bib") %>% select(.,title,doi) %>% 
-#   mutate(.,dois = ifelse(is.na(doi)!=TRUE,paste0("https://doi.org/",doi),NA))
-# 

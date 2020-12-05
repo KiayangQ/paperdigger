@@ -8,6 +8,7 @@ Imports:
     config,
     golem,
     shiny,
+    rvest,
     httr,
     purrr,
     stringr,
@@ -16,7 +17,6 @@ Imports:
     ggplot2,
     glue,
     revtools,
-    rvest,
     progress,
     tools,
     dplyr

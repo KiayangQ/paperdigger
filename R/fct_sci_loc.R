@@ -33,15 +33,11 @@ sci_loc <- function(path,input_url=NULL,original){
     }
    
   }
-  
-  
-    pb <- progress::progress_bar$new(total = length(dois))
+
     added <- round(runif(1,min=10000,max=99999))
     dir_name <- paste0("paper",added)
     dir.create(file.path(dir_name))
     loc_get <- purrr::map2(dois,dir_name,purrr::safely(function(x,y) {
-     
-        pb$tick()
         data1 <- sci_down_orginal(url=url,dois=x,dir=y)
         
        
@@ -53,11 +49,6 @@ sci_loc <- function(path,input_url=NULL,original){
     otherwise = message("Some links may not work, please check them and download manually"))) %>% 
       purrr::transpose()
 
-
-  
-  
-  
-  
   success <- purrr::map_dbl(loc_get$error,function(x){
     note <- c()
     if (is.null(x)){

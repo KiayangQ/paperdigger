@@ -18,19 +18,19 @@
 
 sci_down <- function(path,input_url=NULL,original="Database"){
 
-
+# read file
   data_bib <- read_bib(path,original)
   dois <- data_bib$dois
 
   
-  
+# check url
   if (is.null(input_url)){
     url <- "http://sci-hub.se"
   }else{
     url <- input_url
   }
   
-  
+# progress check
     pb <- progress::progress_bar$new(total = length(dois),clear = FALSE)
     added <- round(runif(1,min=10000,max=99999))
     dir_name <- paste0("paper",added)
@@ -51,7 +51,7 @@ sci_down <- function(path,input_url=NULL,original="Database"){
   
   
   
-  
+  # collecting  
   success <- purrr::map_dbl(loc_get$error,function(x){
     note <- c()
     if (is.null(x)){
@@ -62,6 +62,7 @@ sci_down <- function(path,input_url=NULL,original="Database"){
     rbind(note,failure)
   })
   
+  # wrangling
   data <- purrr::map(loc_get,~ purrr::discard(.x, is.null))$result %>% unlist() %>% as.data.frame(.,stringsAsFactors = FALSE)
   locs <-  data$. %>% stringr::str_split(., "#") %>% purrr::map_chr(.,function(x)`[[`(x,1) %>% `[`(.,1))
  if(original=="Database") {

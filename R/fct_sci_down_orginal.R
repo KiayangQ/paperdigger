@@ -34,19 +34,11 @@ sci_down_orginal <- function(url,dois,dir=NULL){
     img <- ggplot2::ggplot()+ggimage::geom_image(ggplot2::aes(x=1,y=1,image=image_loc),size=1)+ggplot2::theme_void()
     print(img)
     ans <- readline("Input captcha please: ")
-    # shinyalert::shinyalert(title = 'Input captcha!!', imageUrl =image_loc, type="input",inputType = "text", confirmButtonText = "OK",
-    #                            cancelButtonText = "Cancel", showCancelButton = TRUE,  imageWidth = 500,imageHeight = 500,
-    #                            showConfirmButton = TRUE,inputId = "shinyalert")
-    
-    signin <- html_form(test_cap)[[1]]
-    filled <- set_values(signin,'answer'=ans)
-    signined <-  submit_form(test_cap, filled)       
+    signin <- rvest::html_form(test_cap)[[1]]
+    filled <- rvest::set_values(signin,'answer'=ans)
+    signined <-  rvest::submit_form(test_cap, filled)       
     sth <- stringr::str_detect(signined$response$headers$`content-type`,"text/html")         
     }
-
-
-  
-  
 
   pattern2 <- glue::glue_collapse(c(
       "zero_length"="(?<=/)",
